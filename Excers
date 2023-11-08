@@ -1,0 +1,13 @@
+
+TA 7 c) 
+
+
+
+let rec reverse a c = 
+  if a < 1 then c 
+  else reverse (a/10) (c*10 + a mod 10 ) ;;
+  
+
+let isPalindrome b = reverse b 0 = b ;; 
+
+isPalindrome 1221
