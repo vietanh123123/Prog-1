@@ -1,5 +1,5 @@
 
-TA 7 c) 
+                                                                                                  TA 7 c) 
 
 
 
@@ -11,3 +11,14 @@ let rec reverse a c =
 let isPalindrome b = reverse b 0 = b ;; 
 
 isPalindrome 1221
+
+
+                                                                                                   TA 7 d)
+
+let effPower x n m =
+                let rec effPower' x n  a = 
+                    if n = 0 then a mod m else effPower' (x) (n-1)  (a mod m *x) 
+                in effPower'  (x mod m) n  1
+
+
+
