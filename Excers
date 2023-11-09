@@ -20,5 +20,11 @@ let effPower x n m =
                     if n = 0 then a mod m else effPower' (x) (n-1)  (a mod m *x) 
                 in effPower'  (x mod m) n  1
 
+                                                                                                  E0 11.
+                                                                                             
 
-
+let rec check (x: int) : bool =
+  if x = 0 then true else
+    let y = square x in
+    let z = square' x in
+    if y = z then check (x - 1) else false
