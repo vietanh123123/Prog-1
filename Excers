@@ -28,3 +28,13 @@ let rec check (x: int) : bool =
     let y = square x in
     let z = square' x in
     if y = z then check (x - 1) else false
+
+
+TB5 a) 
+
+
+
+let vip a = let rec foo a n = if a mod 2 = 0 then foo (a/2) (n+1)
+  else if a mod 2 = 1 && a != 1 then foo (3*a + 1 ) (n+1)
+  else n + 1 in 
+  foo a 0;;
