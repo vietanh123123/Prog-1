@@ -33,8 +33,19 @@ let rec check (x: int) : bool =
 TB5 a) 
 
 
-
 let vip a = let rec foo a n = if a mod 2 = 0 then foo (a/2) (n+1)
   else if a mod 2 = 1 && a != 1 then foo (3*a + 1 ) (n+1)
   else n + 1 in 
   foo a 0;;
+
+TB6 a) 
+
+let abs a  = if a >= 0 then a else -a ;;
+let max (a,b) = if a>= b then a else b ;; 
+
+let rec lardigit a n = if (abs a) < 10 then max(abs a,n)
+  else let n = if ((abs a) mod 10) >= n then (abs a) mod 10 else n in
+  lardigit ((abs a)/10) n ;; 
+
+
+
