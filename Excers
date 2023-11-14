@@ -47,5 +47,13 @@ let rec lardigit a n = if (abs a) < 10 then max(abs a,n)
   else let n = if ((abs a) mod 10) >= n then (abs a) mod 10 else n in
   lardigit ((abs a)/10) n ;; 
 
+Tb 6 b, 
+
+let sumvip n =
+  let rec sum n a = 
+   if n  <= 0 then if a > 10 then sum a 0 else a 
+   else sum (n/10) ( a + (n mod 10));
+   in sum n 0 ;; 
+   
 
 
